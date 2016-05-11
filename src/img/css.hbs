@@ -1,0 +1,11 @@
+{{#each customselectors}}{{this}},{{/each}}
+{{prefix}}{{name}} {
+    background-image: url('{{datauri}}');
+    background-repeat: no-repeat;
+}
+
+{{#each customselectors}}{{this}}, {{/each}}.z {
+    content: "";
+    width: {{width}};
+    height: {{height}};
+}
