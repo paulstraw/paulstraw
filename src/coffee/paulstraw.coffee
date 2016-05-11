@@ -44,7 +44,7 @@ loaded = ->
   , 1000
 
   $('.twitter-link').on 'mouseenter', ->
-    $(this).velocity('bounce');
+    $(this).find('svg').velocity('bounce');
 
 
   $('li').on 'mouseenter', ->

@@ -2456,7 +2456,7 @@ return function (global, window, document, undefined) {
       });
     }, 1000);
     $('.twitter-link').on('mouseenter', function() {
-      return $(this).velocity('bounce');
+      return $(this).find('svg').velocity('bounce');
     });
     return $('li').on('mouseenter', function() {
       var el, hoverEls;
