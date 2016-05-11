@@ -6,7 +6,7 @@
 
 .icon-coin-01--before:before, .icon-coin-01--after:after, .z {
     content: "";
-    width: 359px;
+    width: 1190px;
     height: 359px;
 }
 
@@ -19,7 +19,7 @@
 
 .icon-coin--before:before, .icon-coin--after:after, .z {
     content: "";
-    width: 359px;
+    width: 1190px;
     height: 359px;
 }
 
@@ -34,6 +34,45 @@
     content: "";
     width: 390px;
     height: 108px;
+}
+
+
+.icon-does-not-compute--before:before,.icon-does-not-compute--after:after,
+.icon-does-not-compute {
+    background-image: url('png/does-not-compute.png');
+    background-repeat: no-repeat;
+}
+
+.icon-does-not-compute--before:before, .icon-does-not-compute--after:after, .z {
+    content: "";
+    width: 1600px;
+    height: 600px;
+}
+
+
+.icon-doesnotcompute--before:before,.icon-doesnotcompute--after:after,
+.icon-doesnotcompute {
+    background-image: url('png/doesnotcompute.png');
+    background-repeat: no-repeat;
+}
+
+.icon-doesnotcompute--before:before, .icon-doesnotcompute--after:after, .z {
+    content: "";
+    width: 1600px;
+    height: 600px;
+}
+
+
+.icon-drift--before:before,.icon-drift--after:after,
+.icon-drift {
+    background-image: url('png/drift.png');
+    background-repeat: no-repeat;
+}
+
+.icon-drift--before:before, .icon-drift--after:after, .z {
+    content: "";
+    width: 111px;
+    height: 50px;
 }
 
 
@@ -58,8 +97,8 @@
 
 .icon-fancyselect--before:before, .icon-fancyselect--after:after, .z {
     content: "";
-    width: 70px;
-    height: 79px;
+    width: 285px;
+    height: 52px;
 }
 
 
@@ -97,8 +136,8 @@
 
 .icon-hewlett-packard--before:before, .icon-hewlett-packard--after:after, .z {
     content: "";
-    width: 351px;
-    height: 351px;
+    width: 932px;
+    height: 183px;
 }
 
 
@@ -112,6 +151,84 @@
     content: "";
     width: 351px;
     height: 351px;
+}
+
+
+.icon-imgix--before:before,.icon-imgix--after:after,
+.icon-imgix {
+    background-image: url('png/imgix.png');
+    background-repeat: no-repeat;
+}
+
+.icon-imgix--before:before, .icon-imgix--after:after, .z {
+    content: "";
+    width: 304px;
+    height: 100px;
+}
+
+
+.icon-luminous--before:before,.icon-luminous--after:after,
+.icon-luminous {
+    background-image: url('png/luminous.png');
+    background-repeat: no-repeat;
+}
+
+.icon-luminous--before:before, .icon-luminous--after:after, .z {
+    content: "";
+    width: 264px;
+    height: 49px;
+}
+
+
+.icon-motif--before:before,.icon-motif--after:after,
+.icon-motif {
+    background-image: url('png/motif.png');
+    background-repeat: no-repeat;
+}
+
+.icon-motif--before:before, .icon-motif--after:after, .z {
+    content: "";
+    width: 156px;
+    height: 82px;
+}
+
+
+.icon-octopus--before:before,.icon-octopus--after:after,
+.icon-octopus {
+    background-image: url('png/octopus.png');
+    background-repeat: no-repeat;
+}
+
+.icon-octopus--before:before, .icon-octopus--after:after, .z {
+    content: "";
+    width: 400px;
+    height: 300px;
+}
+
+
+.icon-placemat--before:before,.icon-placemat--after:after,
+.icon-placemat {
+    background-image: url('png/placemat.png');
+    background-repeat: no-repeat;
+}
+
+.icon-placemat--before:before, .icon-placemat--after:after, .z {
+    content: "";
+    width: 302px;
+    height: 80px;
+}
+
+
+.icon-sjw-industries--before:before,.icon-sjw-industries--after:after,
+.icon-sjw-industries {
+    background-image: url('png/sjw-industries.png');
+    background-repeat: no-repeat;
+}
+
+.icon-sjw-industries--before:before, .icon-sjw-industries--after:after, .z {
+    content: "";
+    width: 255px;
+    height: 118px;
 }
 
 
@@ -149,8 +266,8 @@
 
 .icon-sundial--before:before, .icon-sundial--after:after, .z {
     content: "";
-    width: 70px;
-    height: 79px;
+    width: 207px;
+    height: 49px;
 }
 
 
@@ -164,6 +281,19 @@
     content: "";
     width: 219px;
     height: 53px;
+}
+
+
+.icon-twitter--before:before,.icon-twitter--after:after,
+.icon-twitter {
+    background-image: url('png/twitter.png');
+    background-repeat: no-repeat;
+}
+
+.icon-twitter--before:before, .icon-twitter--after:after, .z {
+    content: "";
+    width: 405px;
+    height: 405px;
 }
 
 

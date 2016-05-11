@@ -12,53 +12,39 @@ $.Velocity.RegisterEffect 'rotatey',
 $.Velocity.RegisterEffect 'slideDownIn',
   defaultDuration: 1200
   calls: [
-      [{opacity: [1, 0], translateY: [0, -40] }]
+    [{opacity: [1, 0], translateY: [0, -40] }]
   ]
 
 $.Velocity.RegisterEffect 'slideDownInRotate',
   defaultDuration: 900
   calls: [
-      [{opacity: [1, 0], translateY: [0, -20], rotateX: [0, 10] }]
+    [{opacity: [1, 0], translateY: [0, -20], rotateX: [0, 10] }]
   ]
 
-$.Velocity.RegisterEffect 'slideUpInRotate',
-  defaultDuration: 900
+$.Velocity.RegisterEffect 'bounce',
+  defaultDuration: 200,
   calls: [
-      [{opacity: [1, 0], translateY: [0, 20], rotateX: [0, -10] }]
+    [{translateY: -6}]
+    [{translateY: 0}]
+    [{translateY: -6}]
+    [{translateY: 0}]
   ]
+
 
 ready = ->
   $('.hidey').css(opacity: 0)
-
-  # messing with some hue rotation stuff
-  # doc = $(document)
-  # win = $(window)
-  # docHeight = doc.height()
-  # winHeight = win.height()
-  # rotators = $('.hue')
-
-  # $(window).on 'resize', ->
-  #   docHeight = doc.height()
-  #   winHeight = win.height()
-
-
-  # doc.on 'scroll touchmove', ->
-  #   scrollOff = window.scrollY
-  #   rot = (scrollOff + (winHeight / scrollOff)) / docHeight * 360
-  #   console.log rot
-  #   rotators.css '-webkit-filter', "hue-rotate(#{rot}deg)"
 
 loaded = ->
   workEl = $('.work')
 
   $('.initial').velocity('slideDownInRotate', {stagger: 450})
-  # workEl.css display: 'none'
 
   setTimeout ->
     $('.secondary').velocity('slideDownIn', {stagger: 450})
-    # workEl.css display: 'block'
-    # workEl.find('li').velocity('slideDownInRotate', {stagger: 360})
   , 1000
+
+  $('.twitter-link').on 'mouseenter', ->
+    $(this).velocity('bounce');
 
 
   $('li').on 'mouseenter', ->

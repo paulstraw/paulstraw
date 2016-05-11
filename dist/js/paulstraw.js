@@ -2415,14 +2415,24 @@ return function (global, window, document, undefined) {
     ]
   });
 
-  $.Velocity.RegisterEffect('slideUpInRotate', {
-    defaultDuration: 900,
+  $.Velocity.RegisterEffect('bounce', {
+    defaultDuration: 200,
     calls: [
       [
         {
-          opacity: [1, 0],
-          translateY: [0, 20],
-          rotateX: [0, -10]
+          translateY: -6
+        }
+      ], [
+        {
+          translateY: 0
+        }
+      ], [
+        {
+          translateY: -6
+        }
+      ], [
+        {
+          translateY: 0
         }
       ]
     ]
@@ -2445,6 +2455,9 @@ return function (global, window, document, undefined) {
         stagger: 450
       });
     }, 1000);
+    $('.twitter-link').on('mouseenter', function() {
+      return $(this).velocity('bounce');
+    });
     return $('li').on('mouseenter', function() {
       var el, hoverEls;
       el = $(this);

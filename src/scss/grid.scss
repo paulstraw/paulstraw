@@ -34,7 +34,7 @@
 	align-self: stretch;
 }
 
-@media (max-width: 479px) {
+@media (max-width: 767px) {
 	.row {
 		padding: 8px;
 	}
@@ -245,7 +245,7 @@
 	}
 }
 
-@media (min-width: 480px) and (max-width: 839px) {
+@media (min-width: 768px) and (max-width: 839px) {
 	.row {
 		padding: 8px;
 	}
