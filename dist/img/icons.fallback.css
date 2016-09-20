@@ -45,8 +45,8 @@
 
 .icon-does-not-compute--before:before, .icon-does-not-compute--after:after, .z {
     content: "";
-    width: 1600px;
-    height: 600px;
+    width: 255px;
+    height: 93px;
 }
 
 
@@ -216,6 +216,19 @@
     content: "";
     width: 302px;
     height: 80px;
+}
+
+
+.icon-shuffle-nyc--before:before,.icon-shuffle-nyc--after:after,
+.icon-shuffle-nyc {
+    background-image: url('png/shuffle-nyc.png');
+    background-repeat: no-repeat;
+}
+
+.icon-shuffle-nyc--before:before, .icon-shuffle-nyc--after:after, .z {
+    content: "";
+    width: 400px;
+    height: 30px;
 }
 
 

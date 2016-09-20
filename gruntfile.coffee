@@ -68,17 +68,17 @@ module.exports = (grunt) ->
     watch:
       css:
         files: 'src/**/*.scss'
-        tasks: ['sass', 'postcss', 'notify:css']
+        tasks: ['sass', 'postcss']
         options:
           spawn: false
       js:
         files: ['src/coffee/**/*.coffee', 'src/vendor/js/**/*.js']
-        tasks: ['coffee', 'concat', 'uglify', 'notify:js']
+        tasks: ['coffee', 'concat', 'uglify']
         options:
           spawn: false
       icons:
         files: ['src/img/*.svg', 'src/img/*.png']
-        tasks: ['grunticon:icons', 'notify:icons']
+        tasks: ['grunticon:icons']
         options:
           spawn: false
 
