@@ -27,6 +27,8 @@
 
     if (input !== TARGET) {
       setTimeout(run, 0);
+    } else {
+      input += ' 🙊'
     }
   }
 
