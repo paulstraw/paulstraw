@@ -15,9 +15,13 @@ body {
 
 .display {
   font-size: 72px;
+  line-height: 84px;
+  white-space: pre-line;
+  word-wrap: break-word;
   color: #222;
   margin: 100px auto 0;
   width: 90%;
+  max-width: 1120px;
   font-weight: 600;
   font-family: -apple-system, BlinkMacSystemFont,
     "Segoe UI", "Roboto", "Oxygen",

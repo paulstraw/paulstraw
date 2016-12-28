@@ -1,6 +1,6 @@
 (function() {
-  const TARGET = 'It was the best of times, it was the blurst of times.';
-  const LETTERS = 'abcdefghijklmnopqrstuvwxyz ,. ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+  const TARGET = 'It\xa0was\xa0the\xa0best\xa0of\xa0times,\xa0it\xa0was\xa0the\xa0blurst\xa0of\xa0times.';
+  const LETTERS = 'abcdefghijklmnopqrstuvwxyz\xa0,.ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
   const LETTER_LENGTH = LETTERS.length;
   const DISPLAY = document.querySelector('.display');
   var input = '';
