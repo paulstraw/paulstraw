@@ -29,6 +29,7 @@
       setTimeout(run, 0);
     } else {
       input += ' 🙊';
+      render();
     }
   }
 
