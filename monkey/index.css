@@ -67,6 +67,10 @@ a { -webkit-tap-highlight-color: #FF5E99; }
 
 .group:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
+body {
+  background: #f4f4f4;
+}
+
 .display {
   font-size: 72px;
   color: #222;
