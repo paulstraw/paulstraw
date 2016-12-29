@@ -1,20 +1,30 @@
 (function() {
-  const TARGET = 'It\xa0was\xa0the\xa0best\xa0of\xa0times,\xa0it\xa0was\xa0the\xa0blurst\xa0of\xa0times.';
-  const LETTERS = 'abcdefghijklmnopqrstuvwxyz\xa0,.ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-  const LETTER_LENGTH = LETTERS.length;
+  var letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ,. '.split('');
+  var targetString = 'It was the best of times, it was the blurst of times. ';
+  var inputString = '';
+  var lettersLength = letters.length;
+  var monkeyAdded = false;
+
   const DISPLAY = document.querySelector('.display');
-  var input = '';
 
   function addCharacter() {
-    input += LETTERS[~~(Math.random() * LETTER_LENGTH)];
+    inputString += letters[~~(Math.random() * lettersLength)];
   }
 
   function render() {
-    DISPLAY.innerText = input;
+    DISPLAY.innerText = inputString;
   }
 
   function checkValidity() {
-    return input === TARGET.substr(0, input.length);
+    return inputString === targetString.substr(0, inputString.length);
+  }
+
+  function addMonkey() {
+    monkeyAdded = true;
+    letters.push('🙊');
+    lettersLength = letters.length;
+
+    targetString += '🙊';
   }
 
   function run() {
@@ -22,14 +32,14 @@
     render();
 
     if (!checkValidity()) {
-      input = input.substr(0, input.length - 1);
+      inputString = inputString.substr(0, inputString.length - 1);
     }
 
-    if (input !== TARGET) {
+    if (inputString !== targetString) {
       setTimeout(run, 0);
-    } else {
-      input += ' 🙊';
-      render();
+    } else if (!monkeyAdded) {
+      addMonkey();
+      setTimeout(run, 0);
     }
   }
 
