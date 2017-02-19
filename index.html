@@ -1,338 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="designer" content="Paul Straw">
-		<meta name="developer" content="Paul Straw">
-		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
-		<title>Paul Straw » Software Developer</title>
-		<meta name="description" content="I create web-based applications using neat tools.">
+    <title>Paul Straw</title>
+    <meta name="description" content="I like making things and helping people.">
 
-		<script src="https://use.typekit.net/ajv1jnp.js"></script>
-		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <link rel="shortcut icon" href="favicon.ico">
 
-		<link rel="shortcut icon" href="favicon.ico">
-		<link rel="stylesheet" media="screen, projection" href="dist/css/paulstraw.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
+    <style>
+      body, input, select, textarea, button { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
 
-		<script src="dist/js/paulstraw.js"></script>
+      a { -webkit-tap-highlight-color: #fff; }
 
-		<script>
-			/*! grunt-grunticon Stylesheet Loader - v2.1.6 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+      ::-moz-selection { background: rgba(105, 155, 192, 0.7); color: #333; }
+      ::selection { background: rgba(105, 155, 192, 0.7); color: #333; }
 
-			!function(){function e(e,n,t){"use strict";var o=window.document.createElement("link"),r=n||window.document.getElementsByTagName("script")[0],a=window.document.styleSheets;return o.rel="stylesheet",o.href=e,o.media="only x",r.parentNode.insertBefore(o,r),o.onloadcssdefined=function(e){for(var n,t=0;t<a.length;t++)a[t].href&&a[t].href===o.href&&(n=!0);n?e():setTimeout(function(){o.onloadcssdefined(e)})},o.onloadcssdefined(function(){o.media=t||"all"}),o}function n(e,n){e.onload=function(){e.onload=null,n&&n.call(e)},"isApplicationInstalled"in navigator&&"onloadcssdefined"in e&&e.onloadcssdefined(n)}!function(t){var o=function(r,a){"use strict";if(r&&3===r.length){var i=t.navigator,c=t.document,s=t.Image,d=!(!c.createElementNS||!c.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!c.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||t.opera&&-1===i.userAgent.indexOf("Chrome")||-1!==i.userAgent.indexOf("Series40")),l=new s;l.onerror=function(){o.method="png",o.href=r[2],e(r[2])},l.onload=function(){var t=1===l.width&&1===l.height,i=r[t&&d?0:t?1:2];t&&d?o.method="svg":t?o.method="datapng":o.method="png",o.href=i,n(e(i),a)},l.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",c.documentElement.className+=" grunticon"}};o.loadCSS=e,o.onloadCSS=n,t.grunticon=o}(this),function(e,n){"use strict";var t=n.document,o="grunticon:",r=function(e){if(t.attachEvent?"complete"===t.readyState:"loading"!==t.readyState)e();else{var n=!1;t.addEventListener("readystatechange",function(){n||(n=!0,e())},!1)}},a=function(e){return n.document.querySelector('link[href$="'+e+'"]')},i=function(e){var n,t,r,a,i,c,s={};if(n=e.sheet,!n)return s;t=n.cssRules?n.cssRules:n.rules;for(var d=0;d<t.length;d++)r=t[d].cssText,a=o+t[d].selectorText,i=r.split(");")[0].match(/US\-ASCII\,([^"']+)/),i&&i[1]&&(c=decodeURIComponent(i[1]),s[a]=c);return s},c=function(e){var n,r,a,i;a="data-grunticon-embed";for(var c in e){i=c.slice(o.length);try{n=t.querySelectorAll(i)}catch(s){continue}r=[];for(var d=0;d<n.length;d++)null!==n[d].getAttribute(a)&&r.push(n[d]);if(r.length)for(d=0;d<r.length;d++)r[d].innerHTML=e[c],r[d].style.backgroundImage="none",r[d].removeAttribute(a)}return r},s=function(n){"svg"===e.method&&r(function(){c(i(a(e.href))),"function"==typeof n&&n()})};e.embedIcons=c,e.getCSS=a,e.getIcons=i,e.ready=r,e.svgLoadedCallback=s,e.embedSVG=s}(grunticon,this)}();
+      body {
+        font-family: "Source Serif Pro", serif;
+        background: #fff;
+        color: #333;
+        font-size: 21px;
+        line-height: 1.6;
+        padding-bottom: 10vh;
+        padding-top: 4vh;
+      }
 
-			grunticon(["dist/img/icons.data.svg.css", "dist/img/icons.data.png.css", "dist/img/icons.fallback.css"], grunticon.svgLoadedCallback);
-		</script>
-	</head>
+      a {
+        color: #699BC0;
+      }
 
-	<body>
-		<div class="bg hue"></div>
+      .inner {
+        margin: 0 auto;
+        padding: 0 2.5vw;
+        max-width: 700px;
+      }
 
-		<div class="row initial-container">
-			<header id="ps" class="hue col col12">
-				<h1 class="hidey initial">Paul Straw</h1>
-				<h2 class="hidey initial">Software Developer</h2>
-			</header>
+      h1, h2, h3, h4, h5, h6 {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+      }
 
-			<article class="hue bio col col12 hidey secondary">
-				<p>Hi, I’m Paul Straw. I like building things and helping people using tools like Ruby on Rails, JavaScript, Swift, and of course a healthy dose of HTML and CSS.</p>
+      img {
+        max-width: 100%;
+      }
 
-				<p>When I have the opportunity, I enjoy making open source software, teaching other people about computers, and podcasting.</p>
+      h1, h2, h3, h4, h5, h6 {
+        line-height: 1.4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="inner">
+      <main>
+        <h1>Hello, I’m Paul Straw.</h1>
 
-				<p>You can find me on <a href="https://twitter.com/paulstraw">Twitter</a>, <a href="https://github.com/paulstraw">GitHub</a>, <a href="https://paulstraw.svbtle.com">Svbtle</a>, <a href="https://dribbble.com/paulstraw">Dribbble</a>, <a href="mailto:paulstraw@paulstraw.com">paulstraw@paulstraw.com</a>, and my Spec podcast, <a href="http://spec.fm/podcasts/does-not-compute">Does Not Compute</a>.</p>
+        <p>I like making all sorts of things, like <a href="https://spec.fm/podcasts/does-not-compute">podcasts</a>, <a href="https://paul.st/FPChw0kkZKQU.html">experimental blogs</a>, <a href="http://seainthesky.com/">generative art</a>, and <a href="https://soundcloud.com/paulstraw">mediocre music</a>.</p>
 
-				<p>Here are some things I've made, and companies I've worked with:</p>
-			</article>
-		</div>
+        <p>Professionally speaking, I'm the CTO/Co-Founder of <a href="https://nestnotes.com">Nestnotes</a>. We're working to help families preserve and protect their most important memories. Previously, I was at imgix handling developer relations (poorly). Before that, I was Consulting Director/Partner at Octopus, a boutique design and development studio located in Santa Cruz.</p>
 
-		<ul class="work hidey secondary">
-			<li class="row">
-				<div class="inner col col12">
-					<a href="https://imgix.com">
-						<div class="row row-no-spacing">
-							<div class="col col4 col3-tablet logo icon-imgix" data-grunticon-embed></div>
+        <p>You can find me on <a href="https://twitter.com/paulstraw">Twitter</a>, <a href="https://github.com/paulstraw">GitHub</a>, <a href="https://paulstraw.svbtle.com">Svbtle</a>, <a href="https://dribbble.com/paulstraw">Dribbble</a>, and <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#x3a;&#112;&#97;&#117;&#x6c;&#x73;&#x74;&#114;&#x61;&#119;&#64;&#x70;&#x61;&#x75;&#108;&#x73;&#x74;&#x72;&#x61;&#x77;.&#x63;&#111;&#x6d;">&#x70;&#97;&#117;&#108;s&#x74;&#114;a&#x77;&#x40;&#112;&#x61;&#x75;&#108;&#115;&#116;&#114;&#97;&#119;&#46;&#99;&#111;&#x6d;</a>. 👋</p>
+      </main>
+    </div>
 
-							<article class="col col8 col5-tablet">
-								<h3>imgix — <em>Developer Relations</em></h3>
-								<p>Building client libraries and other open-source tools to help people serve beautiful images faster and more effectively.</p>
-							</article>
-						</div>
-					</a>
-				</div>
-			</li>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-			<li class="row">
-				<div class="inner col col12">
-					<a href="https://spec.fm/podcasts/does-not-compute">
-						<div class="row row-no-spacing">
-							<div class="col col4 col3-tablet logo icon-does-not-compute" data-grunticon-embed></div>
-
-							<article class="col col8 col5-tablet">
-								<h3>Does Not Compute</h3>
-								<p>A weekly chat about the lives and workflows of modern web developers, hosted by Sean Washington and Paul Straw.</p>
-							</article>
-						</div>
-					</a>
-				</div>
-			</li>
-
-			<li class="row">
-				<div class="inner col col12">
-					<a href="https://shuffle.nyc">
-						<div class="row row-no-spacing">
-							<div class="col col4 col3-tablet logo icon-shuffle-nyc" data-grunticon-embed></div>
-
-							<article class="col col8 col5-tablet">
-								<h3>Shuffle NYC</h3>
-								<p>Apartment and classifieds newsletter app with a New York City focus. Built and launched the product from end-to-end; design and development.</p>
-							</article>
-						</div>
-					</a>
-				</div>
-			</li>
-
-			<li class="row">
-				<div class="inner col col12">
-					<a href="https://sjw.industries">
-						<div class="row row-no-spacing">
-							<div class="col col4 col3-tablet logo icon-sjw-industries" data-grunticon-embed></div>
-
-							<article class="col col8 col5-tablet">
-								<h3>SJW Industries</h3>
-								<p>Clothing and accessories made by awesome designers to help benefit all sorts of important causes.</p>
-							</article>
-						</div>
-					</a>
-				</div>
-			</li>
-
-			<li class="row">
-				<div class="inner col col12">
-					<a href="http://octopuscreative.com">
-						<div class="row row-no-spacing">
-							<div class="col col4 col3-tablet logo icon-octopus" data-grunticon-embed></div>
-
-							<article class="col col8 col5-tablet">
-								<h3>Octopus — <em>Consulting Director / Partner</em></h3>
-								<p>Development team lead, client relationship and project management, web application architecture and development.</p>
-							</article>
-						</div>
-					</a>
-				</div>
-			</li>
-
-			<li class="row">
-				<div class="inner col col12">
-					<a href="https://www.google.com/?gws_rd=i_mean_what_else_am_i_going_to_link_to">
-						<div class="row row-no-spacing">
-							<div class="col col4 col3-tablet logo icon-google" data-grunticon-embed></div>
-
-							<article class="col col8 col5-tablet">
-								<h3>Google</h3>
-								<p>Develop proof of concept prototype application. I can't say more here because NDAs, but man was it nifty. Also, their on-site sushi place is great.</p>
-							</article>
-						</div>
-					</a>
-				</div>
-			</li>
-
-			<li class="row">
-				<div class="inner col col12">
-					<a href="https://placem.at">
-						<div class="row row-no-spacing">
-							<div class="col col4 col3-tablet logo icon-placemat" data-grunticon-embed></div>
-
-							<article class="col col8 col5-tablet">
-								<h3>Placemat</h3>
-								<p>Generate smart, responsive social network images that help your whole site look better in just a few clicks.</p>
-							</article>
-						</div>
-					</a>
-				</div>
-			</li>
-
-			<li class="row">
-				<div class="inner col col12">
-					<a href="https://motif.imgix.com">
-						<div class="row row-no-spacing">
-							<div class="col col4 col3-tablet logo icon-motif" data-grunticon-embed></div>
-
-							<article class="col col8 col5-tablet">
-								<h3>Motif</h3>
-								<p>Generate smart, responsive social network images that help your whole site look better in just a few clicks.</p>
-							</article>
-						</div>
-					</a>
-				</div>
-			</li>
-
-			<li class="row">
-				<div class="inner col col12">
-					<a href="https://coverhound.com">
-						<div class="row row-no-spacing">
-							<div class="col col4 col3-tablet logo icon-coverhound" data-grunticon-embed></div>
-
-							<article class="col col8 col5-tablet">
-								<h3>CoverHound</h3>
-								<p>Development support and integration with internal development teams for over three years.</p>
-							</article>
-						</div>
-					</a>
-				</div>
-			</li>
-
-			<li class="row">
-				<div class="inner col col12">
-					<a href="https://unionandfifth.com">
-						<div class="row row-no-spacing">
-							<div class="col col4 col3-tablet logo icon-union-and-fifth" data-grunticon-embed></div>
-
-							<article class="col col8 col5-tablet">
-								<h3>Union &amp; Fifth</h3>
-								<p>Full Rails 4 site with custom ecommerce and inventory management systems. Ongoing maintenance, features, and devops for a year after launch.</p>
-							</article>
-						</div>
-					</a>
-				</div>
-			</li>
-
-			<li class="row">
-				<div class="inner col col12">
-					<a href="https://onlycoin.com/">
-						<div class="row row-no-spacing">
-							<div class="col col4 col3-tablet logo icon-coin" data-grunticon-embed></div>
-
-							<article class="col col8 col5-tablet">
-								<h3>Coin</h3>
-								<p>Homepage animation design and implementation.<br>&nbsp;</p>
-							</article>
-						</div>
-					</a>
-				</div>
-			</li>
-
-			<li class="row">
-				<div class="inner col col12">
-					<a href="https://verifyinvestor.com/">
-						<div class="row row-no-spacing">
-							<div class="col col4 col3-tablet logo icon-verifyinvestor" data-grunticon-embed></div>
-
-							<article class="col col8 col5-tablet">
-								<h3>VerifyInvestor</h3>
-								<p>Full site buildout including payment, reviewer/investor messaging, and JavaScript image redaction/annotation tool. Completed in four weeks.</p>
-							</article>
-						</div>
-					</a>
-				</div>
-			</li>
-
-			<li class="row">
-				<div class="inner col col12">
-					<a href="https://sketchbookproject.com/">
-						<div class="row row-no-spacing">
-							<div class="col col4 col3-tablet logo icon-the-sketchbook-project" data-grunticon-embed></div>
-
-							<article class="col col8 col5-tablet">
-								<h3>The Sketchbook Project</h3>
-								<p>Complete redesign implementation and upgrade to Rails 4. Refactor and migration of existing production database schema.</p>
-							</article>
-						</div>
-					</a>
-				</div>
-			</li>
-
-			<li class="row">
-				<div class="inner col col12">
-					<a href="http://hp.com/">
-						<div class="row row-no-spacing">
-							<div class="col col4 col3-tablet logo icon-hewlett-packard" data-grunticon-embed></div>
-
-							<article class="col col8 col5-tablet">
-								<h3>Hewlett-Packard</h3>
-								<p>Develop proof of concept prototype application. I have to stay vague because of NDAs, but JavaScript physics engines are super fun.</p>
-							</article>
-						</div>
-					</a>
-				</div>
-			</li>
-
-			<li class="row">
-				<div class="inner col col12">
-					<a href="https://github.com/imgix/drift">
-						<div class="row row-no-spacing">
-							<div class="col col4 col3-tablet logo icon-oss icon-drift" data-grunticon-embed></div>
-
-							<article class="col col8 col5-tablet">
-								<h3>Drift</h3>
-								<p>Easily add "zoom on hover" functionality to your site's images. Lightweight, no-dependency JavaScript.</p>
-							</article>
-						</div>
-					</a>
-				</div>
-			</li>
-
-			<li class="row">
-				<div class="inner col col12">
-					<a href="https://github.com/imgix/luminous">
-						<div class="row row-no-spacing">
-							<div class="col col4 col3-tablet logo icon-oss icon-luminous" data-grunticon-embed></div>
-
-							<article class="col col8 col5-tablet">
-								<h3>Luminous</h3>
-								<p>A simple, lightweight, no-dependencies JavaScript lightbox.<br>&nbsp;</p>
-							</article>
-						</div>
-					</a>
-				</div>
-			</li>
-
-			<li class="row">
-				<div class="inner col col12">
-					<a href="https://github.com/paulstraw/sundial">
-						<div class="row row-no-spacing">
-							<div class="col col4 col3-tablet logo icon-oss icon-sundial" data-grunticon-embed></div>
-
-							<article class="col col8 col5-tablet">
-								<h3>Sundial</h3>
-								<p>A nice, usable datetime picker. Lots of options, no DOM library required.<br>&nbsp;</p>
-							</article>
-						</div>
-					</a>
-				</div>
-			</li>
-
-			<li class="row">
-				<div class="inner col col12">
-					<a href="https://github.com/paulstraw/fancyselect">
-						<div class="row row-no-spacing">
-							<div class="col col4 col3-tablet logo icon-oss icon-fancyselect" data-grunticon-embed></div>
-
-							<article class="col col8 col5-tablet">
-								<h3>FancySelect</h3>
-								<p>JavaScript select replacement tool. Easily style select dropdowns. I now use CSS to style native controls, for usability and accessability reasons.</p>
-							</article>
-						</div>
-					</a>
-				</div>
-			</li>
-		</ul>
-
-		<a href="https://twitter.com/paulstraw" title="@paulstraw on Twitter" class="twitter-link icon-twitter" data-grunticon-embed></a>
-
-		<script type="text/javascript">
-			var _gauges = _gauges || [];
-			(function() {
-				var t = document.createElement('script');
-				t.type = 'text/javascript';
-				t.async = true;
-				t.id = 'gauges-tracker';
-				t.setAttribute('data-site-id', '4def0dbff5a1f54585000001');
-				t.src = '//secure.gaug.es/track.js';
-				var s = document.getElementsByTagName('script')[0];
-				s.parentNode.insertBefore(t, s);
-			})();
-		</script>
-	</body>
+      ga('create', 'UA-92176484-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
 </html>
