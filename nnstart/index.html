@@ -71,6 +71,34 @@
       code, pre {
         font-family: "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", "Courier", monospace;
       }
+
+      .reports {
+        clear: both;
+        padding-top: 6vh;
+        margin: 0 10px;
+      }
+
+      .service .light {
+        width: 21px;
+        height: 21px;
+        border-radius: 21px;
+        background: #ccc;
+        float: left;
+        margin-top: 3px;
+      }
+
+      .light.red {
+        background: #fc968b;
+      }
+
+      .light.green {
+        background: #a0e8c7;
+      }
+
+      .service p {
+        padding-left: 30px;
+        line-height: 1.4;
+      }
     </style>
   </head>
 
@@ -141,6 +169,48 @@
           </li>
         </ul>
       </section>
+
+      <div class="reports">
+        <div class="service api-v1">
+          <div class="light"></div>
+          <p>
+            <strong>https://api.nestnotes.com/v1</strong><br>
+            <span class="status"></span>
+          </p>
+        </div>
+      </div>
     </main>
+
+    <script>
+      (function() {
+        var req = fetch('https://api.nestnotes.com/v1');
+        var light = document.querySelector('.api-v1 .light');
+        var status = document.querySelector('.api-v1 .status');
+        var start = Date.now();
+
+        function catcher(err) {
+          light.classList.add('red');
+          status.innerText = err;
+        }
+
+        req.then(function(res) {
+          var end = Date.now();
+          var jsonDingus = res.json();
+
+          jsonDingus.then(function(json) {
+            if (json.data.version === '1') {
+              light.classList.add('green');
+              status.innerText = `HTTP ${res.status}, ${end - start}ms`;
+            } else {
+              catcher('Unexpected response!');
+            }
+          });
+
+          jsonDingus.catch(catcher);
+        });
+
+        req.catch(catcher);
+      }());
+    </script>
   </body>
 </html>
